@@ -500,3 +500,238 @@ nav ul{
 }
 
 }
+
+/* ======================================
+   FITUR TAMBAHAN (TAMBAHKAN DI PALING BAWAH)
+====================================== */
+
+/* Smooth Transition */
+*{
+    transition: .3s ease;
+}
+
+/* Body Fade In */
+body{
+    animation: pageFade 1s ease;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* Section */
+section{
+    padding:80px 0;
+    animation:fadeUp .8s ease;
+}
+
+/* Glass Effect */
+section .container{
+    position:relative;
+}
+
+/* Judul Glow */
+section h2{
+    transition:.4s;
+}
+
+section h2:hover{
+    text-shadow:
+    0 0 8px rgba(198,139,60,.4),
+    0 0 20px rgba(198,139,60,.3);
+}
+
+/* Hover Semua Gambar */
+img{
+    transition:.5s;
+}
+
+img:hover{
+    transform:scale(1.03);
+}
+
+/* Efek Shine Card */
+.card{
+    position:relative;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+    transform:skewX(-25deg);
+}
+
+.card:hover::before{
+    left:130%;
+    transition:.9s;
+}
+
+/* Floating Button */
+button{
+    transition:.35s;
+}
+
+button:hover{
+    box-shadow:
+    0 15px 35px rgba(198,139,60,.35);
+}
+
+/* Hero Text Animation */
+.hero-content h2{
+    animation:slideDown 1s ease;
+}
+
+.hero-content p{
+    animation:fadeUp 1.2s ease;
+}
+
+.hero button{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Promo Background Bergerak */
+.promo{
+    background-size:300% 300%;
+    animation:bgMove 10s linear infinite;
+}
+
+@keyframes bgMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Footer Hover */
+footer:hover{
+    background:#3b2418;
+}
+
+/* Input Hover */
+.form-kontak input:hover,
+.form-kontak textarea:hover{
+    border-color:#c68b3c;
+}
+
+/* Shadow Section */
+section{
+    position:relative;
+}
+
+section::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:85%;
+    height:1px;
+    background:rgba(0,0,0,.08);
+}
+
+/* Scroll Animation */
+.card,
+.quote,
+section,
+.hero-content{
+    animation-duration:.9s;
+}
+
+/* Floating Card */
+.card:hover{
+    animation:floating .8s ease;
+}
+
+@keyframes floating{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Link Hover */
+a{
+    transition:.3s;
+}
+
+a:hover{
+    opacity:.9;
+}
+
+/* Social Icon (jika nanti ditambahkan) */
+.social a{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#5b3716;
+    color:#fff;
+    text-decoration:none;
+    transition:.35s;
+}
+
+.social a:hover{
+    transform:translateY(-8px) rotate(360deg);
+    background:#c68b3c;
+}
+
+/* Efek Blur Saat Hover */
+.card:hover{
+    backdrop-filter:blur(15px);
+}
+
+/* Hero Button Pulse */
+.hero button:hover{
+    animation:pulse .8s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(198,139,60,.6);
+    }
+    70%{
+        box-shadow:0 0 0 18px rgba(198,139,60,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(198,139,60,0);
+    }
+}
